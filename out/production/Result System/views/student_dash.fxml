@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentDashController">
+    <left>
+        <VBox alignment="BASELINE_CENTER" spacing="16.0" BorderPane.alignment="CENTER">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <padding>
+                <Insets bottom="16.0" left="16.0" right="16.0" top="6.0" />
+            </padding>
+            <Button fx:id="print_btn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#print_result" prefHeight="32.0" prefWidth="130.0" text="Print Result" />
+            <Button layoutX="26.0" layoutY="31.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="130.0" text="Edit profile" />
+            <Button layoutX="26.0" layoutY="79.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="130.0" text="Change password" />
+            <Button layoutX="26.0" layoutY="79.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#logout" prefHeight="32.0" prefWidth="100.0" text="Logout" />
+        </VBox>
+    </left>
+    <top>
+        <HBox alignment="CENTER_LEFT" style="-fx-background-color: F3F3F3;" styleClass="header" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="8.0" left="16.0" right="16.0" top="8.0" />
+            </padding>
+            <ImageView fitHeight="58.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../resources/city-uni-logo.png" />
+            </ImageView>
+            <Label fx:id="heading" text="Welcome To STUDENT PANEL" textFill="#616161" textOverrun="CLIP">
+                <font>
+                    <Font name="Segoe UI" size="26.0" />
+                </font>
+                <padding>
+                    <Insets left="32.0" />
+                </padding>
+            </Label>
+        </HBox>
+    </top>
+    <bottom>
+        <VBox BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
+            </padding>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="City University, Ashulia,Savar,Dhaka">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Text>
+        </VBox>
+    </bottom>
+    <center>
+        <VBox fx:id="print_area" spacing="12.0">
+            <padding>
+                <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+            </padding>
+            <Text fx:id="name" strokeType="OUTSIDE" strokeWidth="0.0" text="Example Name">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Text>
+
+            <Text fx:id="student_roll" strokeType="OUTSIDE" strokeWidth="0.0" text="Student of CSE Depertment" wrappingWidth="171.7255859375">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Text>
+            
+         <Text fx:id="designation" layoutX="24.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student of CSE Depertment" wrappingWidth="171.7255859375">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Text>
+
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="City University, Ashulia,Savar,Dhaka">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Text>
+            <Text fx:id="cgpaTotal" layoutX="24.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total CGPA : 0.0">
+                <font>
+                    <Font size="12.0" />
+                </font>
+            </Text>
+            <ScrollPane fitToWidth="true" minHeight="306.0" minWidth="770.0" style="-fx-background-color: transparent; -fx-border-color: #000000;" VBox.vgrow="ALWAYS">
+                <padding>
+                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                </padding>
+                <VBox fx:id="tableField" />
+            </ScrollPane>
+        </VBox>
+    </center>
+</BorderPane>
